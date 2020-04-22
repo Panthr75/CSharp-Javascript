@@ -6,7 +6,17 @@
         /// Returns a string representation of an object.
         /// </summary>
         /// <returns></returns>
-        public override string ToString() => raw_value.ToString();
+        public override string ToString()
+        {
+            if (isNaN)
+                return "NaN";
+            if (raw_value == POSITIVE_INFINITY)
+                return "Infinity";
+            if (raw_value == NEGATIVE_INFINITY)
+                return "-Infinity";
+
+            return raw_value.ToString()
+        }
 
         /// <summary>
         /// Returns a string representation of an object.

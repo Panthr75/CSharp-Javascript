@@ -1,4 +1,6 @@
-﻿namespace JavaScript
+﻿using JavaScript.Errors;
+
+namespace JavaScript
 {
     public partial class Number
     {
@@ -16,7 +18,7 @@
         public string ToFixed(Number digits)
         {
             if (digits < 0 || digits > 100)
-                throw new System.ArgumentOutOfRangeException("digits", "must be between 0 and 100");
+                throw new RangeError("ToFixed() digits argument must be between 0 and 100");
             else
             {
                 Number multiplier = Math.Pow(new Number(10), digits);

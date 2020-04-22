@@ -9,6 +9,16 @@ namespace JavaScript
 {
     public static class Global
     {
+        public static Number ParseFloat(object number)
+        {
+            return Number.ParseFloat(new Number(number).ToString());
+        }
+
+        public static Number ParseInt(object number)
+        {
+            return Number.ParseInt(new Number(number).ToString());
+        }
+
         public static IPromise<Response> Fetch(string url) => Fetch(url, new FetchOptions());
 
         public static IPromise<Response> Fetch(string url, FetchOptions options)
