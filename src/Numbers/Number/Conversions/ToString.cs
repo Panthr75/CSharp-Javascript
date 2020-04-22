@@ -15,7 +15,7 @@
             if (raw_value == NEGATIVE_INFINITY)
                 return "-Infinity";
 
-            return raw_value.ToString()
+            return raw_value.ToString();
         }
 
         /// <summary>
