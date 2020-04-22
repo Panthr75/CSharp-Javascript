@@ -13,7 +13,7 @@
         /// </summary>
         /// <param name="precision">Number of significant digits. Must be in the range 1 - 21, inclusive.</param>
         /// <returns></returns>
-        public string ToPrecision(int precision)
+        public string ToPrecision(Number precision)
         {
             string raw_value_string = raw_value.ToString();
 
